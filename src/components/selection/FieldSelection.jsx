@@ -11,24 +11,22 @@ const Data = [
   { id: 2, name: 'Tango 2', field: 'Alpha 2', timestamp: '2024-02-02', production_1D: '35.1233002', production_7D: '45.55006413', production_target: '32.66973369', average_cycle_time: '7451' },
   { id: 3, name: 'Tango 3', field: 'Alpha 3', timestamp: '2024-02-03', production_1D: '35.4733002', production_7D: '45.55006413', production_target: '32.66973369', average_cycle_time: '7451' },
   { id: 4, name: 'Tango 4', field: 'Alpha 4', timestamp: '2024-02-04', production_1D: '35.1233002', production_7D: '45.55006413', production_target: '32.66973369', average_cycle_time: '7451' },
-  // ... other well data
+  
 ]
 
-// const searchCategories = ['name', 'field', 'timestamp', 'production_1D', 'production_7D', 'production_target', 'average_cycle_time'];
+
 
 function sendData(data) {
-  // Implementation of sendData
-  // This could be an API call or any other logic to handle the data
+ 
   console.log('Sending data:', data);
 }
 
 export default function FieldSelection() {
   const [selectedfield, setSelectedfield] = useState(Data[0])
   const [query, setQuery] = useState('')
-  // const [selectedCategory, setSelectedCategory] = useState(searchCategories[0])
-
+ 
   useEffect(() => {
-    // Assuming there's a function to send data to a server or another component
+  
     sendData(selectedfield);
   }, [selectedfield]);
 
