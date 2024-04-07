@@ -13,8 +13,7 @@ const timestamp = [
 ]
 
 function sendData(data) {
-  // Implementation of sendData
-  // This could be an API call or any other logic to handle the data
+
   console.log('Sending data:', data);
 }
 
@@ -23,7 +22,7 @@ export default function FieldSelection() {
   const [query, setQuery] = useState('')
 
   useEffect(() => {
-    // Assuming there's a function to send data to a server or another component
+  
     sendData(selectedFromDate);
   }, [selectedFromDate]);
 
@@ -46,7 +45,7 @@ export default function FieldSelection() {
     <div className="fixed w-60 border-2 rounded-lg">
       <Combobox value={selectedFromDate} onChange={setSelectedFromDate}>
         <div className="relative mt-1">
-          {/* <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left border-2 shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm"> */}
+          
             <Combobox.Input
               className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0"
               displayValue={(fieldItem) => fieldItem.timestamp}
